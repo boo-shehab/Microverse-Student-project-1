@@ -1,17 +1,18 @@
 # Microverse-Student-project-1
 
-> Description the project.
+
+this is a project from microverse to creat a heading mobile page.
 
 
 
 
 ## Built With
 
-- Major languages: Html, Css,javascript, Linters
+- Major languages: (Html, Css,javascript, Linters)
 
 - Frameworks: No framework used
 
-- Technologies used: Git, Github
+- Technologies used: (Git, Github)
 
 
 ## Authors
@@ -36,3 +37,7 @@ Give a ⭐️ if you like this project!
 - Microverse
 - Inspiration
 - etc
+
+## �� License
+​
+This project is [MIT](./LICENSE) licensed.
