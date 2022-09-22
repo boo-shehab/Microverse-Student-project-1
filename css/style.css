@@ -134,8 +134,7 @@ header #burger-button:hover + nav {
 }
 
 header:has(#burger-button:hover) #logo,
-body:has(#burger-button:hover) article,
-body:has(#burger-button:hover) .background-design {
+body:has(#burger-button:hover) section{
   filter: blur(8px);
   background-color: inherit;
 }
@@ -151,7 +150,7 @@ header nav ul {
   text-align: center;
 }
 
-#landing-page nav ul {
+#landing-page div ul {
   display: flex;
   gap: 20px;
 }
@@ -190,21 +189,23 @@ header #burger-button:hover + nav ul li a {
 
 /* Start landing */
 
-article#landing-page {
+#landing-page {
   width: 100vw;
   height: calc(100vh - 70px);
   background-color: white;
   border-bottom-left-radius: 100px;
+  background-image: url("../img/Header\ bg.svg");
 }
 
-article#landing-page .container {
-  position: absolute;
-  top: 50%;
+#landing-page .container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   padding: 14px;
-  overflow: hidden;
 }
 
 #landing-page hgroup h1 {
@@ -222,7 +223,7 @@ article#landing-page .container {
   margin-bottom: 12px;
 }
 
-#landing-page nav p {
+#landing-page div p {
   color: #7f8cff;
   font-weight: 500;
   font-size: 16px;
@@ -230,7 +231,7 @@ article#landing-page .container {
   margin-bottom: 12px;
 }
 
-#landing-page nav img {
+#landing-page div img {
   width: 14.17px;
 }
 
