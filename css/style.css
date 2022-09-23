@@ -25,6 +25,36 @@ ul {
   list-style: none;
 }
 
+.normal-button {
+  margin: 12px 0;
+  width: fit-content;
+  background-color: white;
+  border: 1px solid #6070ff;
+  letter-spacing: 0.03em;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.normal-button:disabled {
+  border: 1px solid #c1c7d0;
+  color: #5e6c84;
+}
+
+.normal-button:hover:not(:disabled) {
+  background: #2230d2;
+  background: #6070ff;
+  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
+  color: #fff;
+}
+
+.normal-button:active:not(:disabled) {
+  background: #2230d2;
+  color: #fff;
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -97,6 +127,18 @@ header #burger-button {
   }
 }
 
+.works-page .card-work .client {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.works-page .card-work .client span {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #344563;
+}
+
 header #burger-button span {
   background-color: black;
   width: 100%;
@@ -150,9 +192,18 @@ header nav ul {
   text-align: center;
 }
 
-#landing-page div ul {
+div.connect ul {
   display: flex;
   gap: 20px;
+}
+
+.works-page .card-work .client ul {
+  list-style-type: revert;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  width: fit-content;
+  gap: 12px;
+  list-style-position: inside;
 }
 
 header #burger-button:hover + nav ul {
@@ -190,17 +241,16 @@ header #burger-button:hover + nav ul li a {
 /* Start landing */
 
 #landing-page {
-  width: 100vw;
   height: calc(100vh - 70px);
   background-color: white;
   border-bottom-left-radius: 100px;
-  background-image: url("../img/Header\ bg.svg");
+  background-image: url("../img/header-shapes\ mobile.jpg");
 }
 
 #landing-page .container {
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -208,14 +258,14 @@ header #burger-button:hover + nav ul li a {
   padding: 14px;
 }
 
-#landing-page hgroup h1 {
+hgroup.info h1 {
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
   margin-bottom: 12px;
 }
 
-#landing-page hgroup p {
+hgroup.info p {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -223,7 +273,7 @@ header #burger-button:hover + nav ul li a {
   margin-bottom: 12px;
 }
 
-#landing-page div p {
+div.connect p {
   color: #7f8cff;
   font-weight: 500;
   font-size: 16px;
@@ -231,8 +281,118 @@ header #burger-button:hover + nav ul li a {
   margin-bottom: 12px;
 }
 
-#landing-page div img {
+div.connect img {
   width: 14.17px;
 }
 
 /* End landing */
+
+/* Start works */
+.works-page .card {
+  display: grid;
+  gap: 12px;
+  margin: 88px 24px;
+  border-radius: 15px;
+}
+
+.works-page .card-work {
+  width: 100%;
+  display: grid;
+  gap: 12px;
+  background-color: white;
+  padding: 16px;
+  border-radius: 15px;
+  height: fit-content;
+}
+
+.works-page .card-work img {
+  width: 100%;
+}
+
+.works-page .card-work .title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+}
+
+.works-page .card-work .client ul li {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #7a869a;
+}
+
+.works-page .card-work .info {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
+}
+
+.works-page .card-work .tages {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: fit-content;
+  gap: 12px;
+}
+
+.works-page .card-work .tages .tage {
+  padding: 4px 12px;
+  background: #ebebff;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6070ff;
+  letter-spacing: 0.03em;
+}
+
+/* End works */
+
+/* Start about me */
+#about {
+  background-color: white;
+  border-top-right-radius: 100px;
+}
+
+#about .container {
+  padding-top: 114px;
+}
+
+#about .skills {
+  margin-top: 60px;
+}
+
+#about .skills .card-list .view {
+  padding: 23px 10px;
+  margin: 10px;
+  border-bottom: 1px solid #dfe1e6;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#about .skills .card-list ul {
+  margin: 12px;
+  display: grid;
+  gap: 12px;
+}
+
+#about .skills .card-list ul li {
+  background-color: #f7f7f9;
+  border-radius: 8px;
+  padding: 9px 9px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #253858;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: left;
+  gap: 16px;
+}
+
+/* End about me */
