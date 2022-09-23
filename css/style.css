@@ -38,6 +38,11 @@ ul {
   line-height: 24px;
 }
 
+.normal-button:disabled {
+  border: 1px solid #c1c7d0;
+  color: #5e6c84;
+}
+
 .normal-button:hover:not(:disabled) {
   background: #2230d2;
   background: #6070ff;
@@ -48,11 +53,6 @@ ul {
 .normal-button:active:not(:disabled) {
   background: #2230d2;
   color: #fff;
-}
-
-.normal-button:disabled {
-  border: 1px solid #c1c7d0;
-  color: #5e6c84;
 }
 
 .container {
