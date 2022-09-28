@@ -182,9 +182,9 @@
             <p>If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it
             </p>
             <form action="https://formspree.io/f/xyyvwqrd" method="POST">
-                <input type="text" required name="full-name" placeholder="full name">
-                <input type="email" required name="Email" placeholder="email">
-                <textarea name="Message" placeholder="write your message here."></textarea>
+                <input type="text" required name="full-name" placeholder="full name" max-length="30">
+                <input type="email" required name="Email" placeholder="email" max-length="30">
+                <textarea name="Message" required placeholder="write your message here." maxlength="500" ></textarea>
                 <button type="submit" class="normal-button">Get in touch</button>
             </form>
         </footer>
