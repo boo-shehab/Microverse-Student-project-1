@@ -9,7 +9,7 @@
 
 
 ### Install
-git clone git@github.com:Zainab-Alzubair/Hello-Microverse.git
+git clone https://github.com/boo-shehab/Microverse-Student-project-1.git
 
 
 
