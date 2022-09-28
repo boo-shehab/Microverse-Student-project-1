@@ -52,7 +52,11 @@ Give a ⭐️ if you like this project!
 
 - Hat tip to anyone whose code was used
 - Inspiration
+<<<<<<< HEAD
 - etc
+=======
+- etc...
+>>>>>>> 57feea4d7725f604237c2dc9c674c02bc4613b6a
 
 ## 📝 License
 
