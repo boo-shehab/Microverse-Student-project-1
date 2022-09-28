@@ -28,7 +28,7 @@ ul {
 .normal-button {
   margin: 12px 0;
   width: fit-content;
-  color: #6070FF;
+  color: #6070ff;
   background-color: white;
   border: 1px solid #6070ff;
   letter-spacing: 0.03em;
@@ -266,6 +266,14 @@ hgroup.info h1 {
   margin-bottom: 12px;
 }
 
+footer p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 50px;
+}
+
 hgroup.info p {
   font-weight: 400;
   font-size: 16px;
@@ -398,12 +406,14 @@ div.connect img {
 }
 
 /* End about me */
+
 /* Start contact */
-footer{
+footer {
   background-color: white;
 }
-footer .contain{
-  background: #6070FF;
+
+footer .contain {
+  background: #6070ff;
   background-image: url(../img/contact\ form\ shapes-mobile.svg);
   background-repeat: no-repeat;
   background-position-x: 100%;
@@ -415,29 +425,25 @@ footer .contain{
   padding: 24px;
   color: white;
 }
-footer h2{
+
+footer h2 {
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
   margin-top: 100px;
   text-align: center;
 }
-footer p{
-  text-align: center;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  margin-bottom: 50px;
-}
-footer form{
+
+footer form {
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 100%;
 }
-footer form input{
-  background: #FFFFFF;  
-  border: 1px solid #CFD8DC;
+
+footer form input {
+  background: #fff;
+  border: 1px solid #cfd8dc;
   outline: none;
   border-radius: 8px;
   font-weight: 400;
@@ -446,9 +452,10 @@ footer form input{
   width: 100%;
   padding: 15px;
 }
-footer form textarea{
-  background: #FFFFFF;
-  border: 1px solid #CFD8DC;
+
+footer form textarea {
+  background: #fff;
+  border: 1px solid #cfd8dc;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
