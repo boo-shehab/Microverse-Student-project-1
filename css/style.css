@@ -28,6 +28,7 @@ ul {
 .normal-button {
   margin: 12px 0;
   width: fit-content;
+  color: #6070FF;
   background-color: white;
   border: 1px solid #6070ff;
   letter-spacing: 0.03em;
@@ -354,6 +355,7 @@ div.connect img {
 #about {
   background-color: white;
   border-top-right-radius: 100px;
+  padding-bottom: 120px;
 }
 
 #about .container {
@@ -396,3 +398,65 @@ div.connect img {
 }
 
 /* End about me */
+/* Start contact */
+footer{
+  background-color: white;
+}
+footer .contain{
+  background: #6070FF;
+  background-image: url(../img/contact\ form\ shapes-mobile.svg);
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 55%;
+  border-top-left-radius: 100px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  color: white;
+}
+footer h2{
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  margin-top: 100px;
+  text-align: center;
+}
+footer p{
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 50px;
+}
+footer form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+footer form input{
+  background: #FFFFFF;  
+  border: 1px solid #CFD8DC;
+  outline: none;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  width: 100%;
+  padding: 15px;
+}
+footer form textarea{
+  background: #FFFFFF;
+  border: 1px solid #CFD8DC;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  padding: 15px;
+  height: 170px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 8px;
+}
+
+/* End contact */
