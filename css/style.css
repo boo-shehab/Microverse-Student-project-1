@@ -28,7 +28,6 @@ ul {
 .normal-button {
   margin: 12px 0;
   width: fit-content;
-  color: #6070ff;
   background-color: white;
   border: 1px solid #6070ff;
   letter-spacing: 0.03em;
@@ -115,22 +114,23 @@ header a#logo {
 header #burger-button {
   width: 18px;
   height: 12px;
-  display: none;
+  display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: space-between;
   z-index: 2;
 }
 
-@media (max-width: 785px) {
+@media (min-width: 786px) {
   header #burger-button {
-    display: flex;
+    display: none;
   }
 }
 
 .works-page .card-work .client {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
 }
 
 .works-page .card-work .client span {
@@ -159,9 +159,13 @@ header #burger-button:hover span:nth-child(3) {
   transform: rotate(-45deg) translateY(-7px);
 }
 
-@media (max-width: 768px) {
+header nav {
+  display: none;
+}
+
+@media (min-width: 786px) {
   header nav {
-    display: none;
+    display: block;
   }
 }
 
@@ -246,6 +250,13 @@ header #burger-button:hover + nav ul li a {
   background-color: white;
   border-bottom-left-radius: 100px;
   background-image: url("../img/header-shapes\ mobile.jpg");
+  background-size: cover;
+}
+
+@media (min-width: 786px) {
+  #landing-page {
+    background-image: url("../img/Header\ bg.svg");
+  }
 }
 
 #landing-page .container {
@@ -255,10 +266,23 @@ header #burger-button:hover + nav ul li a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
   padding: 14px;
 }
+hgroup.info{
+  width: 100%;
+}
 
+@media (min-width: 786px) {
+  hgroup.info {
+    width: 720px;
+  }
+}
+
+@media (min-width: 1200px) {
+  hgroup.info{
+    width: 920px;
+  }
+}
 hgroup.info h1 {
   font-weight: 700;
   font-size: 40px;
@@ -266,12 +290,12 @@ hgroup.info h1 {
   margin-bottom: 12px;
 }
 
-footer p {
-  text-align: center;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  margin-bottom: 50px;
+@media (min-width: 1200px) {
+  hgroup.info h1{
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 0.37px;
+  }
 }
 
 hgroup.info p {
@@ -280,6 +304,13 @@ hgroup.info p {
   line-height: 24px;
   color: #344563;
   margin-bottom: 12px;
+}
+
+@media (min-width: 1200px) {
+  hgroup.info p{
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 
 div.connect p {
@@ -313,9 +344,32 @@ div.connect img {
   border-radius: 15px;
   height: fit-content;
 }
+@media (min-width: 786px) {
+  .works-page .card-work img.igm-right{
+    order: 2;
+  }
+  .works-page .card-work img.igm-left{
+    order: 0;
+  }
+}
+@media (min-width: 786px) {
+  .works-page .card-work {
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 .works-page .card-work img {
+  height: 100%;
   width: 100%;
+}
+
+.works-page .card-work hgroup {
+  display: grid;
+  gap: 12px;
+  height: fit-content;
+  padding: 24px 24px 24px 0;
+  order: 1;
 }
 
 .works-page .card-work .title {
@@ -363,17 +417,32 @@ div.connect img {
 #about {
   background-color: white;
   border-top-right-radius: 100px;
-  padding-bottom: 120px;
 }
 
 #about .container {
   padding-top: 114px;
 }
 
+
+@media (min-width: 1200px) {
+  div hgroup.info{
+    width: auto;
+  }
+  #about .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+}
+
 #about .skills {
   margin-top: 60px;
 }
-
+@media (min-width: 1200px) {
+#about .skills {
+  margin-top: 0;
+}
+}
 #about .skills .card-list .view {
   padding: 23px 10px;
   margin: 10px;
@@ -384,10 +453,23 @@ div.connect img {
   align-items: center;
 }
 
+@media (min-width: 1200px) {
+  #about .skills .card-list .view {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
 #about .skills .card-list ul {
   margin: 12px;
   display: grid;
   gap: 12px;
+}
+
+@media (min-width: 786px ) {
+  #about .skills .card-list ul {
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+  }
 }
 
 #about .skills .card-list ul li {
@@ -404,7 +486,13 @@ div.connect img {
   justify-content: left;
   gap: 16px;
 }
-
+@media (min-width: 786px ) {
+  #about .skills .card-list ul li {
+    grid-auto-flow: row;
+    width: 122px;
+    height: 120px;
+  }
+}
 /* End about me */
 
 /* Start contact */
