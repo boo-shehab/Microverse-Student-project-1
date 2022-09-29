@@ -549,6 +549,12 @@ footer .contain {
   border-top-left-radius: 100px;
 }
 
+@media (min-width: 785px) {
+  footer .container {
+    width: 447px;
+  }
+}
+
 footer h2 {
   font-weight: 700;
   font-size: 40px;
