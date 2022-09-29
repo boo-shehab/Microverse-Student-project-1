@@ -36,6 +36,7 @@ ul {
   font-weight: 500;
   font-size: 17px;
   line-height: 24px;
+  color: #6070ff;
 }
 
 .normal-button:disabled {
@@ -268,7 +269,8 @@ header #burger-button:hover + nav ul li a {
   transform: translate(-50%, -50%);
   padding: 14px;
 }
-hgroup.info{
+
+hgroup.info {
   width: 100%;
 }
 
@@ -279,10 +281,11 @@ hgroup.info{
 }
 
 @media (min-width: 1200px) {
-  hgroup.info{
+  hgroup.info {
     width: 920px;
   }
 }
+
 hgroup.info h1 {
   font-weight: 700;
   font-size: 40px;
@@ -291,7 +294,7 @@ hgroup.info h1 {
 }
 
 @media (min-width: 1200px) {
-  hgroup.info h1{
+  hgroup.info h1 {
     font-size: 48px;
     line-height: 60px;
     letter-spacing: 0.37px;
@@ -307,7 +310,7 @@ hgroup.info p {
 }
 
 @media (min-width: 1200px) {
-  hgroup.info p{
+  hgroup.info p {
     font-size: 20px;
     line-height: 28px;
   }
@@ -344,14 +347,17 @@ div.connect img {
   border-radius: 15px;
   height: fit-content;
 }
+
 @media (min-width: 786px) {
-  .works-page .card-work img.igm-right{
+  .works-page .card-work img.igm-right {
     order: 2;
   }
-  .works-page .card-work img.igm-left{
+
+  .works-page .card-work img.igm-left {
     order: 0;
   }
 }
+
 @media (min-width: 786px) {
   .works-page .card-work {
     grid-auto-flow: column;
@@ -400,6 +406,12 @@ div.connect img {
   gap: 12px;
 }
 
+@media (min-width: 1200px) {
+  .works-page .card-work .tages {
+    grid-template-columns: repeat(4, auto);
+  }
+}
+
 .works-page .card-work .tages .tage {
   padding: 4px 12px;
   background: #ebebff;
@@ -409,6 +421,14 @@ div.connect img {
   line-height: 16px;
   color: #6070ff;
   letter-spacing: 0.03em;
+  width: fit-content;
+}
+
+@media (max-width: 785px) {
+  
+.only-desktop{
+  display: none;
+}
 }
 
 /* End works */
@@ -417,18 +437,19 @@ div.connect img {
 #about {
   background-color: white;
   border-top-right-radius: 100px;
+  padding-bottom: 100px;
 }
 
 #about .container {
   padding-top: 114px;
 }
 
-
 @media (min-width: 1200px) {
-  div hgroup.info{
+  div hgroup.info {
     width: auto;
   }
-  #about .container{
+
+  #about .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
@@ -438,11 +459,13 @@ div.connect img {
 #about .skills {
   margin-top: 60px;
 }
+
 @media (min-width: 1200px) {
-#about .skills {
-  margin-top: 0;
+  #about .skills {
+    margin-top: 0;
+  }
 }
-}
+
 #about .skills .card-list .view {
   padding: 23px 10px;
   margin: 10px;
@@ -459,13 +482,14 @@ div.connect img {
     padding-top: 0;
   }
 }
+
 #about .skills .card-list ul {
   margin: 12px;
   display: grid;
   gap: 12px;
 }
 
-@media (min-width: 786px ) {
+@media (min-width: 786px) {
   #about .skills .card-list ul {
     grid-auto-flow: column;
     grid-auto-columns: min-content;
@@ -486,13 +510,15 @@ div.connect img {
   justify-content: left;
   gap: 16px;
 }
-@media (min-width: 786px ) {
+
+@media (min-width: 786px) {
   #about .skills .card-list ul li {
     grid-auto-flow: row;
     width: 122px;
     height: 120px;
   }
 }
+
 /* End about me */
 
 /* Start contact */
@@ -529,6 +555,12 @@ footer form {
   width: 100%;
 }
 
+@media (min-width: 786px) {
+  footer form {
+    align-items: center;
+  }
+}
+
 footer form input {
   background: #fff;
   border: 1px solid #cfd8dc;
@@ -550,6 +582,7 @@ footer form textarea {
   padding: 15px;
   height: 170px;
   outline: none;
+  width: 100%;
   font-family: 'Poppins', sans-serif;
   border-radius: 8px;
 }
