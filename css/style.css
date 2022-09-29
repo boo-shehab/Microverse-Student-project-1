@@ -354,9 +354,10 @@ div.connect img {
   width: fit-content;
 }
 
-.only-desktop{
+.only-desktop {
   display: none;
 }
+
 /* End works */
 
 /* Start about me */
@@ -464,12 +465,13 @@ footer form textarea {
 }
 
 /* End contact */
+
 /* minemun then 750px */
 @media (min-width: 780px) {
   .container {
     width: 85%;
   }
-  
+
   header #burger-button {
     display: none;
   }
@@ -481,18 +483,21 @@ footer form textarea {
   #landing-page {
     background-image: url("../img/Header\ bg.svg");
   }
-  
+
   hgroup.info {
     width: 720px;
   }
-  hgroup.info h1{
+
+  hgroup.info h1 {
     width: 420px;
   }
+
   hgroup.info p {
     font-size: 20px;
     width: 85%;
     line-height: 28px;
   }
+
   .works-page .card-work img.img-right {
     order: 2;
   }
@@ -516,7 +521,7 @@ footer form textarea {
     width: 122px;
     height: 120px;
   }
-  
+
   footer form {
     align-items: center;
   }
@@ -524,17 +529,13 @@ footer form textarea {
   .only-desktop {
     display: inline;
   }
-  .works-page .card-work .tages {
-    /* grid-template-columns: repeat(4, auto); */
-  }
-  
+
   footer .container {
     width: 447px;
   }
 }
 
 @media (min-width: 1200px) {
-
   div hgroup.info {
     width: auto;
   }
