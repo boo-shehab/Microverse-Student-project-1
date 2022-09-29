@@ -261,6 +261,15 @@ header #burger-button:hover + nav ul li a {
   }
 }
 
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  color: white;
+}
+
 #landing-page .container {
   display: flex;
   flex-direction: column;
@@ -269,6 +278,11 @@ header #burger-button:hover + nav ul li a {
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 14px;
+}
+
+footer p {
+  margin-bottom: 24px;
+  text-align: center;
 }
 
 hgroup.info {
@@ -535,25 +549,11 @@ footer .contain {
   border-top-left-radius: 100px;
 }
 
-footer .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 24px;
-  color: white;
-}
-
 footer h2 {
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
   margin-top: 100px;
-  margin-bottom: 24px;
-  text-align: center;
-}
-
-footer p {
   margin-bottom: 24px;
   text-align: center;
 }
