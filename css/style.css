@@ -425,10 +425,9 @@ div.connect img {
 }
 
 @media (max-width: 785px) {
-  
-.only-desktop{
-  display: none;
-}
+  .only-desktop {
+    display: none;
+  }
 }
 
 /* End works */
