@@ -154,7 +154,7 @@ header #burger-button:hover + nav {
 
 header:has(#burger-button:hover) #logo,
 body:has(#burger-button:hover) section {
-  filter: blur(8px);
+  filter: blur(6px);
   background-color: inherit;
 }
 
