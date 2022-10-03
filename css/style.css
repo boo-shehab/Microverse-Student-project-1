@@ -469,7 +469,7 @@ footer form textarea {
 /* minemun then 750px */
 @media (min-width: 780px) {
   .container {
-    width: 85%;
+    width: 100%;
   }
 
   header #burger-button {
