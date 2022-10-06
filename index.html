@@ -41,11 +41,11 @@
             <div class="connect">
                 <p>LET’S CONNECT</p>
                 <ul>
-                    <li><a href="#"><img src="img/twitter.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="img/Linkedin icon.svg" alt=""></a></li>
-                    <li><a href="#"><img src="img/medium.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="img/github.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="img/angellist.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/twitter.jpg" alt="alt text"></a></li>
+                    <li><a href="#"><img src="img/Linkedin icon.svg" alt="alt text"></a></li>
+                    <li><a href="#"><img src="img/medium.jpg" alt="alt text"></a></li>
+                    <li><a href="#"><img src="img/github.jpg" alt="alt text"></a></li>
+                    <li><a href="#"><img src="img/angellist.jpg" alt="alt text"></a></li>
                 </ul>
             </div>
         </div>
@@ -56,7 +56,7 @@
         <div class="container">
             <article class="card">
                 <div class="card-work">
-                    <img src="img/Snapshoot Portfolio_1.svg" alt="" class="img-left">
+                    <img src="img/Snapshoot Portfolio_1.svg" alt="alt text" class="img-left">
                     <hgroup>
                         <h2 class="title">Tonic</h2>
                         <div class="client">
@@ -78,7 +78,7 @@
             </article>
             <article class="card">
                 <div class="card-work">
-                    <img src="img/Snapshoot Portfolio_2.svg" alt="" class="img-right">
+                    <img src="img/Snapshoot Portfolio_2.svg" alt="alt text" class="img-right">
                     <hgroup>
                         <h2 class="title">Multi-Post Stories</h2>
                         <div class="client">
@@ -101,7 +101,7 @@
             </article>
             <article class="card">
                 <div class="card-work">
-                    <img src="img/Snapshoot Portfolio_3.svg" alt="" class="img-left">
+                    <img src="img/Snapshoot Portfolio_3.svg" alt="alt text" class="img-left">
                     <hgroup>
                         <h2 class="title">Tonic</h2>
                         <div class="client">
@@ -124,7 +124,7 @@
             </article>
             <article class="card">
                 <div class="card-work">
-                    <img src="img/Snapshoot Portfolio_4.svg" alt="" class="img-right">
+                    <img src="img/Snapshoot Portfolio_4.svg" alt="alt text" class="img-right">
                     <hgroup>
                         <h2 class="title">Multi-Post Stories</h2>
                         <div class="client">
@@ -159,29 +159,29 @@
                 <div class="connect">
                     <p>LET’S CONNECT</p>
                     <ul>
-                        <li><a href="#"><img src="img/twitter.jpg" alt=""></a></li>
-                        <li><a href="#"><img src="img/Linkedin icon.svg" alt=""></a></li>
-                        <li><a href="#"><img src="img/medium.jpg" alt=""></a></li>
-                        <li><a href="#"><img src="img/github.jpg" alt=""></a></li>
-                        <li><a href="#"><img src="img/angellist.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="img/twitter.jpg" alt="alt text"></a></li>
+                        <li><a href="#"><img src="img/Linkedin icon.svg" alt="alt text"></a></li>
+                        <li><a href="#"><img src="img/medium.jpg" alt="alt text"></a></li>
+                        <li><a href="#"><img src="img/github.jpg" alt="alt text"></a></li>
+                        <li><a href="#"><img src="img/angellist.jpg" alt="alt text"></a></li>
                     </ul>
                 </div>
                 <button class="normal-button">Get my resume</button>
             </div>
             <div class="skills">
                 <div class="card-list">
-                    <h3 class="view">Languages <img src="img/Normal Button/Tertiary/Icons/Union_1.png" alt="click to hide Languages"></h3>
+                    <h2 class="view">Languages <img src="img/Normal Button/Tertiary/Icons/Union_1.png" alt="click to hide Languages"></h2>
                     <ul>
-                        <li><img src="img/Ellipse 1.png" alt=""> <span>JavaSript</span></li>
-                        <li><img src="img/Ellipse 1 (1).png" alt=""><span>HTML</span></li>
-                        <li><img src="img/Ellipse 1 (2).png" alt=""><span>CSS</span></li>
+                        <li><img src="img/Ellipse 1.png" alt="alt text"> <span>JavaSript</span></li>
+                        <li><img src="img/Ellipse 1 (1).png" alt="alt text"><span>HTML</span></li>
+                        <li><img src="img/Ellipse 1 (2).png" alt="alt text"><span>CSS</span></li>
                     </ul>
                 </div>
                 <div class="card-list">
-                    <h3 class="view">Frameworks <img src="img/Normal Button/Tertiary/Icons/Union.png" alt=""></h3>
+                    <h2 class="view">Frameworks <img src="img/Normal Button/Tertiary/Icons/Union.png" alt="alt text"></h2>
                 </div>
                 <div class="card-list">
-                    <h3 class="view">Skills <img src="img/Normal Button/Tertiary/Icons/Union.png" alt=""></h3>
+                    <h2 class="view">Skills <img src="img/Normal Button/Tertiary/Icons/Union.png" alt="alt text"></h2>
                 </div>
             </div>
         </div>
@@ -195,9 +195,15 @@
                 <p>If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it
                 </p>
                 <form action="https://formspree.io/f/xyyvwqrd" method="POST">
-                    <input type="text" required name="full-name" placeholder="full name" max-length="30">
-                    <input type="email" required name="Email" placeholder="email" max-length="30">
-                    <textarea name="Message" required placeholder="write your message here." maxlength="500" ></textarea>
+                    <label for="full-name" hidden>put your full name</label>
+                    <input type="text" required name="full-name" id="full-name" placeholder="full name" max-length="30">
+                    
+                    <label for="email" hidden>put your Email</label>
+                    <input type="email" id="email" required name="Email" placeholder="email" max-length="30">
+                    
+                    <label for="message" hidden>put your Message</label>
+                    <textarea name="Message"id="message" required placeholder="write your message here." maxlength="500" ></textarea>
+                    
                     <button type="submit" class="normal-button">Get in touch</button>
                 </form>
             </div>
