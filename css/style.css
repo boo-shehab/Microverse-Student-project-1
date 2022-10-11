@@ -17,6 +17,12 @@ body {
   background-color: var(--gray-background-color);
 }
 
+body::before {
+  display: block;
+  content: "";
+  height: 72px;
+}
+
 a {
   text-decoration: none;
 }
@@ -77,6 +83,11 @@ ul {
 
 header {
   background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
 }
 
 header .container {
@@ -95,20 +106,28 @@ header a#logo {
   color: var(--first-main-color);
 }
 
-header #burger-button {
+header .burger-button {
   width: 18px;
   height: 12px;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
   text-align: center;
   justify-content: space-between;
-  z-index: 2;
+  z-index: 4;
 }
 
 .works-page .card-work .client {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 10px;
+}
+
+header .burger-button span {
+  background-color: black;
+  width: 100%;
+  height: 2px;
+  transition: 0.2s;
 }
 
 .works-page .card-work .client span {
@@ -118,30 +137,25 @@ header #burger-button {
   color: #344563;
 }
 
-header #burger-button span {
-  background-color: black;
-  width: 100%;
-  height: 2px;
-  transition: 0.2s;
-}
-
-header #burger-button:hover span:nth-child(1) {
+header .burger-button.active span:nth-child(1) {
   transform: rotate(45deg) translateY(7px);
+  background-color: white;
 }
 
-header #burger-button:hover span:nth-child(2) {
+header .burger-button.active span:nth-child(2) {
   display: none;
 }
 
-header #burger-button:hover span:nth-child(3) {
+header .burger-button.active span:nth-child(3) {
   transform: rotate(-45deg) translateY(-7px);
+  background-color: white;
 }
 
 header nav {
   display: none;
 }
 
-header #burger-button:hover + nav {
+header .burger-button.active + nav {
   display: flex;
   position: fixed;
   width: 100%;
@@ -150,15 +164,17 @@ header #burger-button:hover + nav {
   top: 0;
   background-color: #6070ff;
   mix-blend-mode: multiply;
+  z-index: 3;
 }
 
-header:has(#burger-button:hover) #logo,
-body:has(#burger-button:hover) section {
+header:has(.burger-button.active) #logo,
+body:has(.burger-button.active) section {
   filter: blur(6px);
-  background-color: inherit;
+  background-color: inherit !important;
+  background-image: none !important;
 }
 
-body:has(#burger-button:hover) {
+body:has(.burger-button.active) {
   background-color: inherit;
 }
 
@@ -174,16 +190,7 @@ div.connect ul {
   gap: 20px;
 }
 
-.works-page .card-work .client ul {
-  list-style-type: revert;
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  width: fit-content;
-  gap: 12px;
-  list-style-position: inside;
-}
-
-header #burger-button:hover + nav ul {
+header .burger-button.active + nav ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -191,6 +198,15 @@ header #burger-button:hover + nav ul {
   position: absolute;
   left: 12px;
   top: 90px;
+}
+
+.works-page .card-work .client ul {
+  list-style-type: revert;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  width: fit-content;
+  gap: 12px;
+  list-style-position: inside;
 }
 
 header nav ul li a {
@@ -206,7 +222,7 @@ header nav ul li a:hover {
   color: var(--first-main-color);
 }
 
-header #burger-button:hover + nav ul li a {
+header .burger-button.active + nav ul li a {
   font-weight: 600;
   font-size: 32px;
   line-height: 44px;
@@ -218,7 +234,7 @@ header #burger-button:hover + nav ul li a {
 /* Start landing */
 
 #landing-page {
-  height: calc(100vh - 70px);
+  height: 100vh;
   position: relative;
   background-color: white;
   border-bottom-left-radius: 100px;
@@ -472,7 +488,7 @@ footer form textarea {
     width: 100%;
   }
 
-  header #burger-button {
+  header .burger-button {
     display: none;
   }
 
