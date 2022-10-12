@@ -2,7 +2,6 @@ const burgerButton = document.querySelector(' .burger-button');
 burgerButton.addEventListener('click', () => { burgerButton.classList.toggle('active'); });
 const menuLinkes = document.querySelectorAll('header nav ul.linkes li');
 for (let i = 0; i < menuLinkes.length; i += 1) {
-
   menuLinkes[i].addEventListener('click', () => { burgerButton.classList.toggle('active'); });
 }
 
@@ -138,5 +137,4 @@ function pupUpMenuid(id) {
 const viewBtn = document.getElementsByClassName('popup-window');
 for (let i = 0; i < viewBtn.length; i += 1) {
   viewBtn[i].addEventListener('click', () => pupUpMenuid(i));
-}
 }
