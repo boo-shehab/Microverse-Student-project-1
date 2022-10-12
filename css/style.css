@@ -117,10 +117,20 @@ header .burger-button {
   z-index: 4;
 }
 
+.popup-card .client {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+}
+
 .works-page .card-work .client {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 10px;
+}
+
+.header-group-popup span {
+  display: block;
 }
 
 header .burger-button span {
@@ -130,11 +140,25 @@ header .burger-button span {
   transition: 0.2s;
 }
 
+.popup-card .client span {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #344563;
+}
+
 .works-page .card-work .client span {
   font-weight: 600;
   font-size: 13px;
   line-height: 16px;
   color: #344563;
+}
+
+.header-group-popup {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 10%;
 }
 
 header .burger-button.active span:nth-child(1) {
@@ -165,6 +189,7 @@ header .burger-button.active + nav {
   background-color: #6070ff;
   mix-blend-mode: multiply;
   z-index: 3;
+  opacity: 0.8;
 }
 
 header:has(.burger-button.active) #logo,
@@ -188,6 +213,15 @@ header nav ul {
 div.connect ul {
   display: flex;
   gap: 20px;
+}
+
+.popup-card .client ul {
+  list-style-type: revert;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  width: fit-content;
+  gap: 12px;
+  list-style-position: inside;
 }
 
 header .burger-button.active + nav ul {
@@ -293,6 +327,12 @@ div.connect p {
   margin-bottom: 12px;
 }
 
+.popup-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 div.connect img {
   width: 14.17px;
 }
@@ -300,6 +340,18 @@ div.connect img {
 /* End landing */
 
 /* Start works */
+
+.bg-popup.active {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #c1c7d0;
+  mix-blend-mode: multiply;
+  z-index: 5;
+}
+
 .works-page .card {
   display: grid;
   gap: 12px;
@@ -317,9 +369,21 @@ div.connect img {
   height: fit-content;
 }
 
-.works-page .card-work img {
+.popup-card button img {
+  width: 24px;
+  height: 24px;
+}
+
+.works-page .card-work > img {
   height: 100%;
   width: 100%;
+}
+
+.popup-card hgroup {
+  display: flex;
+  flex-direction: column;
+  padding: 0 !important;
+  height: 90%;
 }
 
 .works-page .card-work hgroup {
@@ -344,6 +408,13 @@ div.connect img {
   color: #7a869a;
 }
 
+.popup-card .info {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+}
+
 .works-page .card-work .info {
   font-weight: 400;
   font-size: 15px;
@@ -351,6 +422,7 @@ div.connect img {
   color: #344563;
 }
 
+.popup-card .tages,
 .works-page .card-work .tages {
   display: grid;
   grid-auto-flow: column;
@@ -358,6 +430,7 @@ div.connect img {
   gap: 12px;
 }
 
+.popup-card .tages .tage,
 .works-page .card-work .tages .tage {
   padding: 4px 12px;
   background: #ebebff;
@@ -482,6 +555,67 @@ footer form textarea {
 
 /* End contact */
 
+/* start popup */
+
+.popup-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 15px;
+  width: 95%;
+  height: 95%;
+  background-color: white;
+  z-index: 20;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+}
+
+.popup-card .card-work {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 15px;
+}
+
+.popup-card .img-div {
+  height: 100%;
+  display: block;
+  justify-items: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.popup-card .button-contaner {
+  padding-top: 0 !important;
+}
+
+.popup-card hgroup .button-contaner {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  padding-top: 40px;
+}
+
+.close-popup {
+  background-color: transparent;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.popup-card .popup-btn {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0;
+  display: inline-flex;
+}
+
+/* end popup */
+
 /* minemun then 750px */
 @media (min-width: 780px) {
   .container {
@@ -549,6 +683,35 @@ footer form textarea {
   footer .container {
     width: 447px;
   }
+
+  /* popup */
+
+  .popup-card .card-work {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 15px;
+  }
+
+  .header-group-popup span {
+    display: block;
+  }
+
+  .popup-card .img-div {
+    text-align: center;
+  }
+
+  .popup-card hgroup {
+    grid-template-columns: 3fr 1fr;
+  }
+
+  .popup-card .main-contaner {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+  }
+
+  /* popup */
 }
 
 @media (min-width: 1200px) {
