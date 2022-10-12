@@ -17,6 +17,12 @@ body {
   background-color: var(--gray-background-color);
 }
 
+body::before {
+  display: block;
+  content: "";
+  height: 72px;
+}
+
 a {
   text-decoration: none;
 }
@@ -105,6 +111,7 @@ header .burger-button {
   height: 12px;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
   text-align: center;
   justify-content: space-between;
   z-index: 4;
