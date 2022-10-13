@@ -139,14 +139,29 @@ for (let i = 0; i < viewBtn.length; i += 1) {
   viewBtn[i].addEventListener('click', () => pupUpMenuid(i));
 }
 
+function emailValidation(isValid) {
+  if (isValid) {
+    const errorEmailValidation = document.createElement('span');
+    errorEmailValidation.classList.add('erorr-massege');
+    errorEmailValidation.classList.add('active');
+    errorEmailValidation.textContent = 'the Email should be in lower cass';
+    document.querySelector('footer label[for = "email"]').appendChild(errorEmailValidation);
+  } else {
+    const errorEmailValidation = document.querySelector('footer label[for = "email"] .erorr-massege');
+    if (errorEmailValidation) {
+      errorEmailValidation.parentNode.removeChild(errorEmailValidation);
+    }
+  }
+}
+
 const contactFormEmail = document.querySelector('form #email');
 const contactFormForm = document.querySelector('form button');
 
 contactFormForm.addEventListener('click', (event) => {
   if (contactFormEmail.value !== contactFormEmail.value.toLowerCase()) {
     event.preventDefault();
-    document.querySelector('form .erorr-massege').classList.add('active');
+    emailValidation(true);
   } else {
-    document.querySelector('form .erorr-massege').classList.remove('active');
+    emailValidation(false);
   }
 });
