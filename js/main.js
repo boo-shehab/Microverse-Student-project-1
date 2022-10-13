@@ -150,10 +150,3 @@ contactFormForm.addEventListener('click', (event) => {
     document.querySelector('form .erorr-massege').classList.remove('active');
   }
 });
-contactFormEmail.addEventListener('input', () => {
-  if (contactFormEmail.value !== contactFormEmail.value.toLowerCase()) {
-    document.querySelector('form label .erorr-massege').classList.add('active');
-  } else {
-    document.querySelector('form label .erorr-massege').classList.remove('active');
-  }
-});
