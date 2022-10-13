@@ -514,12 +514,13 @@ footer .contain {
 footer form label {
   width: 100%;
 }
-input[type = "email"]:invalid {
+
+input[type="email"]:invalid {
   border-color: #900;
   background-color: #fdd;
 }
 
-.erorr-massege{
+.erorr-massege {
   width: 100%;
   background: red;
   border-radius: 6px;
@@ -527,6 +528,7 @@ input[type = "email"]:invalid {
   font-weight: bold;
   display: none;
 }
+
 .erorr-massege.active {
   display: block;
 }
