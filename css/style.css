@@ -511,6 +511,26 @@ footer .contain {
   border-top-left-radius: 100px;
 }
 
+footer form label {
+  width: 100%;
+}
+input[type = "email"]:invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+.erorr-massege{
+  width: 100%;
+  background: red;
+  border-radius: 6px;
+  padding: 6px;
+  font-weight: bold;
+  display: none;
+}
+.erorr-massege.active {
+  display: block;
+}
+
 footer h2 {
   font-weight: 700;
   font-size: 40px;

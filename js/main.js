@@ -138,3 +138,22 @@ const viewBtn = document.getElementsByClassName('popup-window');
 for (let i = 0; i < viewBtn.length; i += 1) {
   viewBtn[i].addEventListener('click', () => pupUpMenuid(i));
 }
+
+const contactFormEmail = document.querySelector('form #email');
+const contactFormForm = document.querySelector('form button');
+
+contactFormForm.addEventListener('click', (event) => {
+  if (contactFormEmail.value !== contactFormEmail.value.toLowerCase()) {
+    event.preventDefault();
+    document.querySelector('form .erorr-massege').classList.add('active');
+  } else {
+    document.querySelector('form .erorr-massege').classList.remove('active');
+  }
+});
+// contactFormEmail.addEventListener('input', () => {
+//   if (contactFormEmail.value !== contactFormEmail.value.toLowerCase()) {
+//     document.querySelector('form label .erorr-massege').classList.add('active');
+//   } else {
+//     document.querySelector('form label .erorr-massege').classList.remove('active');
+//   }
+// });
