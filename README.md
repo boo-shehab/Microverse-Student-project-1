@@ -35,7 +35,7 @@ To get a local copy up and running follow these simple example steps.
 git clone https://github.com/boo-shehab/Microverse-Student-project-1.git
 
 
-## 👤 Author1
+## 👤 Author1 
 
 - GitHub: [@boo-shehab](https://github.com/githubhandle)
 - Twitter: [@boo_shehab2000](https://twitter.com/boo_shehab2000)
@@ -55,11 +55,7 @@ Give a ⭐️ if you like this project!
 
 - Hat tip to anyone whose code was used
 - Inspiration
-<<<<<<< HEAD
-- etc
-=======
 - etc...
->>>>>>> 57feea4d7725f604237c2dc9c674c02bc4613b6a
 
 ## 📝 License
 
